@@ -1,23 +1,21 @@
+bash
 #!/bin/bash
 
 LOG_DOSYASI="alert.log"
 ONEMLI_LOG="onemli_loglar.txt"
 
-# Önemli kelimeler listesi
 ANAHTAR_KELIMELER=("WARNING" "ALERT" "ERROR")
 
-# Daha önceki analiz dosyasını temizle
 > "$ONEMLI_LOG"
 
-while IFS= read -r satir
-do
+while IFS= read -r satir; do
     for kelime in "${ANAHTAR_KELIMELER[@]}"; do
-        if [[ $satir == *"$kelime"* ]]; then 
-            echo "$satir" >> "$ONEMLI_LOG"  
-            break 
+        if [[ $satir == *"$kelime"* ]]; then
+            echo "$satir" >> "$ONEMLI_LOG"
+            break
         fi
     done
-done < "$LOG_DOSYASI" 
+done < "$LOG_DOSYASI"
 
 echo "Analiz tamamlandı. Önemli kayıtlar $ONEMLI_LOG dosyasına yazıldı."
 
