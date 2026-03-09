@@ -1,4 +1,3 @@
-bash
 #!/bin/bash
 
 LOG_DOSYASI="alert.log"
