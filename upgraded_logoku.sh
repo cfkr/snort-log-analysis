@@ -11,9 +11,8 @@ ANAHTAR_KELIMELER=("WARNING" "ALERT" "ERROR")
 
 while IFS= read -r satir
 do
-    for kelime in "${ANAHTAR_KELIMELER[@]}" 
+    for kelime in "${ANAHTAR_KELIMELER[@]}" do
     # "${ANAHTAR_KELIMELER[@]}" ifadesi dizideki tüm elemanları birer birer temsil eder.Yani döngü her turda dizinin bir elemanını kelime isimli değişkene atar.
-    do
         # Eğer satır anahtar kelimeyi içeriyorsa
         if [[ $satir == *"$kelime"* ]]; then 
         #*"$kelime"* ifadesi, $satir içinde $kelime kelimesinin herhangi bir yerde geçip geçmediğini kontrol eder.* dan dolayı bunu yazdık - Bu biçim sadece [[ ... ]] içinde bu şekilde çalışır.
