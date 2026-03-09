@@ -11,7 +11,7 @@ ANAHTAR_KELIMELER=("WARNING" "ALERT" "ERROR")
 
 while IFS= read -r satir
 do
-    for kelime in "${ANAHTAR_KELIMELER[@]}" do
+    for kelime in "${ANAHTAR_KELIMELER[@]}"; do
         if [[ $satir == *"$kelime"* ]]; then 
             echo "$satir" >> "$ONEMLI_LOG"  
             break 
