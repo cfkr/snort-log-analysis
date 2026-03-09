@@ -1,6 +1,6 @@
 [*] [1:1000001:0] ET SCAN Potential SSH Scan [*]
 [Priority: 3]
 11/09-13:55:43.123456 192.168.1.5 -> 192.168.1.10
-[*] [1:1000002:0] ET TROJAN Possible Trojan Traffic [*]
+[*] [1:1000002:0] ET ALERT TROJAN Possible Trojan Traffic [*]
 [Priority: 1]
 11/09-14:10:02.654321 10.0.0.7 -> 10.0.0.9
